@@ -20,10 +20,10 @@
       const reader = new GzipReader(file).entries()
 
       const loop = setInterval(() => {
-      const {done, value} = reader.next()
-      if (!done) 
+         const {done, value} = reader.next()
+         if (!done) 
             process.stdout.write(value)
-      else 
+         else 
             clearInterval(loop)
       }, 1)
    ````
